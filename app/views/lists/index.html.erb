@@ -1,0 +1,12 @@
+<h1>Welcome to your To Do Lists</h1>
+<hr>
+
+<% if @lists.any? %>
+	<ul>
+		<% @lists.each do |show| %>
+			<li> <%= show.name %> - - <%= link_to 'Show', list_path(show) %>
+		<% end %>
+	</ul>
+<% end %>
+<hr>
+<h4>Create a <%= link_to 'new', new_list_path %> list!</h4>

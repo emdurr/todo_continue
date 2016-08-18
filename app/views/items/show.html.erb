@@ -1,0 +1,16 @@
+<h1>Item Info</h1>
+
+<hr>
+
+<h2><%= @item.name %></h2>
+
+<h4><%= @item.description %></h4>
+
+<br>
+<%= link_to 'Edit Item', edit_list_item_path(@list, @item) %> ||
+<%= link_to 'Delete', list_item_path(@list, @item), method: :delete, data: {confirm: 'Are you sure?'} %> ||
+<%= link_to 'Lists', lists_path %>
+<br>
+<hr>
+<%= link_to 'View All Items on this list', list_items_path(@list) %>
+

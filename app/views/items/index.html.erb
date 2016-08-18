@@ -1,0 +1,17 @@
+<h1> <%= @list.name %> to do items:</h1>
+<hr>
+
+<% if @items.any? %>
+	<ul>
+		<% @items.each do |item| %>
+			<li><%= link_to item.name, list_item_path(@list, item) %></li>
+		<% end %>
+
+	</ul>
+<% else %>
+	<h2>No items on this list!</h2>
+<% end %>
+<hr>
+<h4>Create a <%= link_to 'New Item', new_list_item_path(@list) %> </h4>
+<br>
+<h5><%= link_to 'Back to lists', lists_path %></h5>

@@ -1,0 +1,17 @@
+<div class="form">
+	<%= form_for [@list, @item] do |f| %>
+		<%= f.label :name %>
+		<%= f.text_field :name, required: true %>
+		<br>
+		<%= f.label :description %>
+		<%= f.text_field :description %>
+		<br>
+		<%= f.label :completed %>
+		<%= f.select :completed, ['Yes', 'No'] %>
+		<br>
+		<%= f.label :priority %>
+		<%= f.select :priority, ['Yes', 'No'] %>
+		<br>
+		<%= f.submit %>
+	<% end %>
+</div>
