@@ -7,7 +7,7 @@ class ListsController < ApplicationController
   def show
     @items = @list.items.all
     if @items
-      @list_count = Item.all.where(completed: false).count
+      @list_count = @items.all.count
     else
       @list_count = 0
     end
